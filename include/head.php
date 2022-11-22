@@ -21,14 +21,14 @@ require_once "config/app.php";
     <script src="//cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.1.9/jquery.datetimepicker.min.js"></script>
     <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/mar-rrule@2.2.0/lib/rrule.js"></script>
+    <script type="text/javascript" src="//unpkg.com/mar-rrule@2.2.0/lib/rrule.js"></script>
 
 </head>
 
 <style type="text/css">
     #form-container {
         width: 400px;
-        margin: 100px auto;
+        margin: 10px auto;
     }
 
     #form-container input[type="text"] {

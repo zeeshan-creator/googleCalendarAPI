@@ -86,8 +86,12 @@ if (isset($_GET['calendarId'])) {
                         </select>
                         <p id="Repeat title"> Repeat: </p>
                         <select id="repeat-options" autocomplete="off">
-                            <option value="EVERY-WEEK">Every week</option>
-                            <option value="NEVER">Never</option>
+                            <option selected>Never</option>
+                            <option value="EVERY-WEEK">weekly</option>
+                            <!-- <option value="0">YEARLY</option>
+                            <option value="1">MONTHLY</option>
+                            <option value="2">WEEKLY</option>
+                            <option value="3">DAILY</option> -->
                         </select>
                         <p id="Repeats-ending-title"> For how long would you like this event to repeat? </p>
                         <select id="repeat-ending-options" autocomplete="off">
@@ -148,6 +152,7 @@ if (isset($_GET['calendarId'])) {
         onShow: AdjustMinTime,
         onSelectDate: AdjustMinTime
     });
+
     $("#event-date, #repeat-end-time").datetimepicker({
         format: 'Y-m-d',
         timepicker: false,
@@ -324,6 +329,18 @@ if (isset($_GET['calendarId'])) {
         });
     });
 </script>
+
+<script>
+    var rrule = new RRule({
+        freq: RRule.WEEKLY,
+        count: 13,
+        interval: 2,
+        byweekday: RRule.TU
+    });
+
+    console.log(rrule.toString());
+</script>
+
 <?php
 require('./include/foot.php');
 ?>
